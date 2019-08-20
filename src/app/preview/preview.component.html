@@ -1,0 +1,39 @@
+<div class="wrapper" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1rem">
+	<div class="buttons">
+		<button class="view-change-button" mat-raised-button color="primary" (click)="pitchView = true" [disabled]="pitchView">
+			Pitch View
+		</button>
+		<button class="view-change-button" mat-raised-button color="primary" (click)="pitchView = false" [disabled]="!pitchView">
+			Table View
+		</button>
+	</div>
+		
+	<!-- <app-view *ngIf="pitchView"></app-view>
+	<app-list *ngIf="!pitchView"></app-list> -->
+	<div class="pitch" *ngIf="pitchView">
+		<div class="pitch-img"></div>
+	</div>
+
+	<div class="list" *ngIf="!pitchView">
+		<table mat-table [dataSource]="playersArray" class="mat-elevation-z8">
+			<ng-container matColumnDef="name">
+				<th mat-header-cell *matHeaderCellDef> Name </th>
+				<td mat-cell *matCellDef="let player"> {{ player.name }} </td>
+			</ng-container>
+			<ng-container matColumnDef="position">
+				<th mat-header-cell *matHeaderCellDef> Position </th>
+				<td mat-cell *matCellDef="let player"> {{ convertPosition(player.position) }} </td>
+			</ng-container>
+			<ng-container matColumnDef="points">
+				<th mat-header-cell *matHeaderCellDef> Points </th>
+				<td mat-cell *matCellDef="let player"> {{ player.points }} </td>
+			</ng-container>
+			<ng-container matColumnDef="price">
+				<th mat-header-cell *matHeaderCellDef> Price </th>
+				<td mat-cell *matCellDef="let player"> {{ player.price | number:'1.1' }} </td>
+			</ng-container>
+			<tr mat-header-row *matHeaderRowDef="columnsNames"></tr>
+			<tr mat-row *matRowDef="let row; columns: columnsNames;"></tr>
+		</table>
+	</div>
+</div>

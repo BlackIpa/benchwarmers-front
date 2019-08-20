@@ -1,0 +1,32 @@
+<div class="wrapper">
+		<section class="signup-form">
+			<form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
+				<mat-form-field>
+					<input 
+						type="login" 
+						matInput 
+						placeholder="login" 
+						ngModel 
+						name="login"
+						required
+						minlength="3"
+						#loginInput="ngModel">
+					<mat-error *ngIf="loginInput.hasError('required')">Login is required</mat-error>
+				</mat-form-field>
+				<mat-form-field>
+					<input 
+						type="password" 
+						matInput 
+						placeholder="password"
+						ngModel 
+						name="password"
+						required
+						minlength="8"
+						#pwInput>
+						<mat-error>Password is required</mat-error>
+				</mat-form-field>
+				<button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Login</button>
+			</form>
+		</section>
+	</div>
+	
