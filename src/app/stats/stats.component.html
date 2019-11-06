@@ -1,1 +1,8 @@
-<p>stats works!</p>
+<div class="wrapper" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1rem">
+	<h1>{{ title }}</h1>
+	<div>
+		<ul *ngFor="let team of teams">
+			<li>{{ team.id }}. {{ team.teamName }} - Strength: {{ team.strength }}</li>
+		</ul>
+	</div>
+</div>

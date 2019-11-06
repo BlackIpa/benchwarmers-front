@@ -5,6 +5,7 @@ import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +22,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { ListComponent } from './preview/list/list.component';
 import { ViewComponent } from './preview/view/view.component';
+import { TeamService } from './services/team.service';
 
 @NgModule({
   declarations: [
@@ -46,9 +48,10 @@ import { ViewComponent } from './preview/view/view.component';
 		BrowserAnimationsModule,
 		MaterialModule,
 		FlexLayoutModule,
-		FormsModule
+		FormsModule,
+		HttpClientModule
   ],
-  providers: [],
+  providers: [TeamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -32,8 +32,7 @@ const TEAM_DATA: PlayerElement[] = [
   styleUrls: ['./preview.component.scss']
 })
 export class PreviewComponent implements OnInit {
-	pitchView: boolean = true;
-	viewName: String = "Pitch";
+	pitchView: boolean = false;
 
 	columnsNames: string[] = ['name', 'position', 'points', 'price'];
 	playersArray = TEAM_DATA;

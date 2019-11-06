@@ -1,20 +1,22 @@
 <div class="wrapper" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1rem">
-	<div class="buttons">
+<!-- 	<div class="buttons">
 		<button class="view-change-button" mat-raised-button color="primary" (click)="pitchView = true" [disabled]="pitchView">
 			Pitch View
 		</button>
 		<button class="view-change-button" mat-raised-button color="primary" (click)="pitchView = false" [disabled]="!pitchView">
 			Table View
 		</button>
-	</div>
+	</div> -->
 		
 	<!-- <app-view *ngIf="pitchView"></app-view>
 	<app-list *ngIf="!pitchView"></app-list> -->
-	<div class="pitch" *ngIf="pitchView">
-		<div class="pitch-img"></div>
-	</div>
+<!-- 	<div class="pitch-view" *ngIf="pitchView" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1rem">
+		<div class="pitch-wrapper">
+				<img class="pitch-img" src="assets/img/pitch2.jpg" alt="pitch">
+		</div>
+	</div> -->
 
-	<div class="list" *ngIf="!pitchView">
+	<div class="list-view" *ngIf="!pitchView">
 		<table mat-table [dataSource]="playersArray" class="mat-elevation-z8">
 			<ng-container matColumnDef="name">
 				<th mat-header-cell *matHeaderCellDef> Name </th>

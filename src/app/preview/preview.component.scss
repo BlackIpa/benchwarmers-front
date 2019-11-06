@@ -7,21 +7,27 @@
 	margin: 0 .5rem;
 }
 
-.pitch {
-	height:80%;
+.pitch-view {
+	width: 90%;
+}
+
+.pitch-wrapper {
+	width: 750px;
+	height: 700px;
 }
 
 .pitch-img {
-	background-color: green;
-	width: 600px;
-	height: 900px;
-}
+		width: 100%;
+	}
 
-.pitch, .list {
+.list-view {
 	width: 90%;
-	
 }
 
 table {
 	width: 100%;
+}
+
+tr.mat-header-row, tr.mat-row {
+  height: 50px;
 }

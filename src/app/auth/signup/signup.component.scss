@@ -1,14 +1,13 @@
 .wrapper {
 	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
-.signup-form {
-	margin-top: -64px;
-	background-color: white;
-	padding: 1.5rem;
-}
+
 mat-form-field {
 	width: 300px;
+}
+
+@media (max-height: 359px) {
+	.signup-form {
+		margin-top: 64px;
+	}
 }
